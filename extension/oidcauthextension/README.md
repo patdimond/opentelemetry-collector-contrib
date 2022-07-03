@@ -38,8 +38,7 @@ service:
       processors: []
       exporters: [logging]
 ```
-Firebase AppCheck is an example service that both uses custom headers and doesn't provide an auto-discovery mechanism:
-
+Firebase AppCheck is an example service that uses custom headers, doesn't provide an auto-discovery mechanism and has an `issuer_url` that isn't simply the base URL of the JWKS URL.
 ```yaml
 extensions:
   oidc:
