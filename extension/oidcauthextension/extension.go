@@ -74,10 +74,9 @@ func newExtension(cfg *Config, logger *zap.Logger) (configauth.ServerAuthenticat
 }
 
 func (e *oidcExtension) start(context.Context, component.Host) error {
-	e.logger.Info("Starting extension")
 	verifier, err := getVerifierForConfig(e.cfg)
 	if err != nil {
-		return fmt.Errorf("failed to get configuration from the auth server: %w", err)
+		return fmt.Errorf("This is a test build - failed to get configuration from the auth server: %w", err)
 	}
 	e.verifier = verifier
 
