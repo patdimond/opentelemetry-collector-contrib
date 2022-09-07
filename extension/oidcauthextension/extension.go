@@ -232,7 +232,7 @@ func getIssuerCACertFromPath(path string) (*x509.Certificate, error) {
 
 	rawCA, err := os.ReadFile(filepath.Clean(path))
 	if err != nil {
-		return nil, fmt.Errorf("could not read the CA file %q: %w", path, err)
+		return nil, fmt.Errorf("test test test could not read the CA file %q: %w", path, err)
 	}
 
 	if len(rawCA) == 0 {
